@@ -124,7 +124,7 @@ img {
 }
 
 .nav-item:last-child {
-  margin-right: 305px;
+  margin-right: 0;
 }
 
 .nav-links {
@@ -140,6 +140,7 @@ img {
 
 .header-list {
   display: flex;
+  margin-left: auto;
   align-items: center;
 }
 
@@ -177,6 +178,7 @@ img {
   fill: var(--accent-clr);
 }
 
+/* .header-contacts:hover, - ховер свг через наследование цвета*/
 .footer-contacts:hover,
 .footer-contacts:focus,
 .footer-adr:hover,
@@ -187,16 +189,23 @@ img {
   fill: var(--accent-clr);
 }
 
+.nav-item.active a {
+  color: var(--accent-clr);
+}
+
 .header-socials-icon {
   margin-right: 10px;
   fill: var(--main-txt-clr);
+  /* fill: currentColor; -- ховер свг через наследование цвета */
 }
 /* Секция герой */
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
   text-align: center;
   padding: 200px 0;
-  /* margin-bottom: 94px; */
   background-color: #2f303a;
 }
 
@@ -356,8 +365,9 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-picture {
-  margin-bottom: 30px;
+.team-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-member {
@@ -393,7 +403,6 @@ img {
 
 .socials-item {
   margin-right: 8px;
-  padding-bottom: 30px;
   border-radius: 50%;
 }
 
@@ -436,6 +445,14 @@ img {
   display: flex;
 }
 
+.clients-item {
+  margin-right: 30px;
+}
+
+.clients-item:last-child {
+  margin-right: 0;
+}
+
 .clients-link {
   fill: #afb1b8;
 }
@@ -447,7 +464,6 @@ img {
 }
 
 .clients-logo {
-  margin-right: 30px;
   border: 1px solid #afb1b8;
 }
 
@@ -501,21 +517,22 @@ img {
   /* border-bottom: 1px solid #eeeeee; */
 }
 
-.cards-item:hover,
-.cards-item:focus {
-  box-sizing: border-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .third {
   margin-right: 0;
 }
 
 .cards-link {
+  display: block;
   margin-bottom: 20px;
   text-decoration: none;
   color: var(--secondary-txt-clr);
+}
+
+.cards-link:hover,
+.cards-link:focus {
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-indent {
@@ -608,10 +625,11 @@ img {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-cta {
-  margin-left: 156px;
+  margin-left: 70px;
 }
 
 .footer-cta-title {
